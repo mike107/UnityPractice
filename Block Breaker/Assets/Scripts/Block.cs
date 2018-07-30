@@ -12,6 +12,7 @@ public class Block : MonoBehaviour {
     private void Start()
     {
         level = FindObjectOfType<Level>();
+        
         level.CountbreakableBlocks();
     }
 
@@ -22,6 +23,7 @@ public class Block : MonoBehaviour {
 
     private void DestoryBlock()
     {
+        FindObjectOfType<GameSession>().IncreaseScore();
         AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position);
         Destroy(gameObject);
         level.BlockDestroyed();

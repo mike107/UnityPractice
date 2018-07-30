@@ -9,7 +9,8 @@ public class Ball : MonoBehaviour {
     [SerializeField] Paddle paddle1;
     [SerializeField] float xLaunch = 2f;
     [SerializeField] float yLaunch = 15f;
-    [SerializeField] AudioClip[] ballSounds;
+    //[SerializeField] AudioClip[] ballSounds; Had multiple sound for ball hitting the walls. Didn't like it and now don't want an array of sounds, just 1
+    [SerializeField] AudioClip ballSounds;
     
     // state
     Vector2 paddleToBallVector;
@@ -53,7 +54,8 @@ public class Ball : MonoBehaviour {
     {
         if (Started)
         {
-            AudioClip clip = ballSounds[UnityEngine.Random.Range(0, ballSounds.Length)];
+            //AudioClip clip = ballSounds[UnityEngine.Random.Range(0, ballSounds.Length)]; This is linked with multiple sound for balls. Only need 1 audiosource now.
+            AudioClip clip = ballSounds;
             myAudioSource.PlayOneShot(clip);
         }
     }

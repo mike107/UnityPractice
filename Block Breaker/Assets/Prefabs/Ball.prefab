@@ -188,11 +188,7 @@ MonoBehaviour:
   paddle1: {fileID: 0}
   xLaunch: 2
   yLaunch: 15
-  ballSounds:
-  - {fileID: 8300000, guid: a990f5a03c335654cb3077eb1a6d725d, type: 3}
-  - {fileID: 8300000, guid: 1274f2ff81e687845b7f2cbb28b7f62d, type: 3}
-  - {fileID: 8300000, guid: ca03179c19af82949989b50b2a877ec2, type: 3}
-  - {fileID: 8300000, guid: 694d66ca669a1984db1d983de290d971, type: 3}
+  ballSounds: {fileID: 8300000, guid: 1274f2ff81e687845b7f2cbb28b7f62d, type: 3}
 --- !u!212 &212877471271994862
 SpriteRenderer:
   m_ObjectHideFlags: 1
